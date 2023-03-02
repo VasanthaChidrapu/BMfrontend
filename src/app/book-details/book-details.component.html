@@ -1,0 +1,48 @@
+
+<h3>View Book Details</h3>
+<hr>
+    <!-- <div>
+        <div>
+            <label><b> Book Id: </b></label>{{book.book_id}}
+        </div>
+        <div>
+            <label><b> Book Name: </b></label>{{book.book_name}}
+        </div>
+        <div>
+            <label><b> Book Genre: </b></label>{{book.book_genre}}
+        </div>
+        <div>
+            <label><b> Book Author: </b></label>{{book.book_author}}
+        </div>
+        <div>
+            <label><b> Book Publishers: </b></label>{{book.book_publishers}}
+        </div>
+        <div>
+            <label><b> Book Ratings: </b></label>{{book.book_ratings}}
+        </div>
+    </div> -->
+
+    <div class="table-container">
+        <table class="table table-striped table-hover" >
+            <thead>
+            <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Book Genre</th>
+                <th>Book Author</th>
+                <th>Book Publishers</th>
+                <th>Book Ratings</th>
+            </tr>
+          </thead>
+        <tbody>
+            <tr>
+                <td>{{ book.book_id}}</td>
+                <td>{{ book.book_name}}</td>
+                <td>{{ book.genre.book_genre}}</td>
+                <td>{{ book.book_author}}</td>
+                <td>{{ book.publisher.publisher_name}}</td>
+                <td>{{ book.book_ratings}}</td>
+            </tr>
+        </tbody>
+    </table>
+    

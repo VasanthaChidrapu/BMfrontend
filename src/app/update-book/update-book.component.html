@@ -1,0 +1,42 @@
+<div class="col-md-8 offset-md-3">
+    <h2>Update Book</h2>
+    <form (ngSubmit) = "onSubmit()">
+        <!-- {{book | json}} -->
+        <!-- <div class="form-group">
+            <label>Book Id</label>
+            <input type="text" class="form-control" id="book_name" [(ngModel)] = "book.book_id" name="book_id">
+        </div><br> -->
+    <div class="form-group">
+        <label>Book Name</label>
+        <input type="text" class="form-control" id="book_name" [(ngModel)] = "book.book_name" name="book_name" autocomplete="off">
+    </div><br>
+    <div class="form-group">
+        <label>Book Genre</label>
+        <input type="text" class="form-control" id="book_genre"  autocomplete="off">
+    </div><br>
+    <!-- <div class="form-group">
+    <label for="book_genre">Book Genre</label>
+    <select id="book_genre" class="form-control" [(ngModel)]="book.book_genre" name="book_genre">
+      <option *ngFor="let option of myOptions" [value]="option">{{option}}</option>
+    </select>
+  </div><br>
+   -->
+   <!-- [(ngModel)] = "book.book_publishers" name="book_publishers" 
+  [(ngModel)] = "book.book_genre" name="book_genre"-->
+    <div class="form-group">
+        <label>Book Author</label>
+        <input type="text" class="form-control" id="book_author" [(ngModel)] = "book.book_author" name="book_author" autocomplete="off"> 
+    </div> <br>
+    <div class="form-group">
+        <label>Book Publishers</label>
+        <input type="text" class="form-control" id="book_publishers"  autocomplete="off">   
+    </div> <br>
+    <div class="form-group">
+        <label>Book Ratings</label>
+        <input type="text" class="form-control" id="book_ratings" [(ngModel)] = "book.book_ratings" name="book_ratings" autocomplete="off">   
+    </div>
+    
+    <br>
+    <button class= "btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>

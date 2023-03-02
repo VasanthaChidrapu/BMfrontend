@@ -1,0 +1,7 @@
+.table-container{
+    border: 1px solid;
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}

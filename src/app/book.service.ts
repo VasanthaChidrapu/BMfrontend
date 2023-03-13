@@ -26,9 +26,11 @@ export class BookService {
   getBookById(book_id: number): Observable<Book> {
     return this.httpClient.get<Book>(`${this.apiURL}/${book_id}`);
   }
-
-  updateBook(book_id: number, book: Book): Observable<Object> {
-    return this.httpClient.put(`${this.apiURL}/${book_id}`, book);
+  // updateBook(genereId: any, publisherId: any,book_id: number, book: Book): Observable<Object> {
+  //   return this.httpClient.put(`${this.apiURL}`+ "/" + genereId + "/" + publisherId + "/" + book_id, book);
+  // }
+  updateBook(selectedGenere: any, selectedPublisher: any, book_id: number, book: any): Observable<Object> {
+    return this.httpClient.put(this.apiURL + "/" + selectedGenere + "/" + selectedPublisher + "/" + book_id, book);
   }
   deleteBook(book_id: number): Observable<Object> {
     return this.httpClient.delete(`${this.apiURL}/${book_id}`);

@@ -58,6 +58,7 @@ export class UpdateBookComponent implements OnInit {
     // this.book.genre.genre_id = Number(this.createBookForm.get("book_genre")?.value)
     this.bookService.updateBook(this.selectedGenere, this.selectedPublisher, this.book_id, this.createBookForm.value).subscribe(data => {
       this.createBookForm.value
+      this.goToBookList();
       // this.bookService.updateBook(this.book_id,this.book).subscribe( data => {
       // this.goToBookList();
     },
